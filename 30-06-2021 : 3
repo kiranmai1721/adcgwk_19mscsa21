@@ -1,0 +1,26 @@
+import java.util.*;
+class Sub_MulAndSum 
+{
+    public static void main(String args[])
+ {
+        int rem,sum=0,mul=1;
+        Scanner scn=new Scanner(System.in);
+        System.out.println("enter n value");
+        int n=scn.nextInt();
+        while(n>0)
+        {
+            rem=n%10;
+            mul*=rem;
+            sum+=rem;
+            n=n/10;
+        }
+        int result = mul-sum;
+        System.out.println("result"+"="+ mul +"-"+ sum+"="+result);
+    }
+}
+
+............................................
+OUTPUT:
+         enter n value
+         1721
+         result=14-11=3
