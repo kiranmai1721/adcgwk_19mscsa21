@@ -1,0 +1,30 @@
+import java.util.*;
+class Replacing
+{
+ public static void main(String args[])
+ {
+  int n,x,y,rem,res=0,mul=1;
+  Scanner scn=new Scanner(System.in);
+  System.out.println("enter n value");
+  n=scn.nextInt();
+  System.out.println("enter x");
+  x=scn.nextInt();
+  System.out.println("enter y");
+  y=scn.nextInt();
+  while((n/10)>0)
+  {
+   rem=n%10;
+   if(rem==x)
+    res=res+y*mul;
+   else
+    res=res+rem*mul;
+   mul*=10;
+   n=n/10;
+   }
+   if(n==x)
+    res=res+y*mul;
+   else
+    res=res+n*mul;
+   System.out.println(res);
+  }
+ }
