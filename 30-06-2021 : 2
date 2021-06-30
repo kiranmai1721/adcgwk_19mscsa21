@@ -1,0 +1,28 @@
+import java.util.*;
+class Harshad
+{
+ public static void main(String args[])
+ {
+  int n,temp,rem,sum=0;
+  Scanner scn=new Scanner(System.in);
+  System.out.println("enter n value");
+  n=scn.nextInt();
+  temp=n;
+  while(n>0)
+  {
+   rem=n%10;
+   sum+=rem;
+   n=n/10;
+  }
+  if(temp%sum==0)
+   System.out.println("harshad number");
+  else
+   System.out.println("not a harshad number");
+ }
+}
+
+.......................................
+OUTPUT:
+        enter n value     | enter n value
+        156               | 1721
+        harshad number    | not a harshed number
