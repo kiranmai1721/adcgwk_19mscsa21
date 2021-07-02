@@ -1,0 +1,28 @@
+import java.util.*;
+class IncDec
+{
+ public static void main(String args[])
+ {
+  Scanner scn=new Scanner(System.in);
+  System.out.println("Enter a value");
+  int n=scn.nextInt();
+  if(n>=0 && n<=1000)  // This is Constrain sir
+  {
+   if(n%4==0)
+   {
+    ++n;
+    System.out.println(n);
+   }
+   else
+   {
+    --n;
+    System.out.println(n);
+   }
+  }
+ }
+}
+......................................
+OUTPUT:
+       Enter a value
+       5
+       4
