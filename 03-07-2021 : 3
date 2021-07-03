@@ -1,0 +1,22 @@
+import java.util.*;
+class Automorphic
+{
+ public static void main(String args[])
+ {
+  Scanner scn=new Scanner(System.in);
+  System.out.println("Enter a number");
+  int n=scn.nextInt();
+  int sq;
+  sq=n*n;
+  int temp=sq%(int)Math.pow(100,1);
+  if(n==temp)
+   System.out.println("Automorphic");
+  else
+   System.out.println("not Automorphic");
+ }
+}
+........................................
+OUTPUT :
+       Enter a number
+       76              |  7
+       Automorphic     |  not Automorphic
