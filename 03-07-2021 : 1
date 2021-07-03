@@ -1,0 +1,49 @@
+import java.util.*;
+class Pattern
+{
+ public static void main(String args[])
+ {
+  Scanner scn=new Scanner(System.in);
+  System.out.println("enter n value");
+  int n=scn.nextInt();
+  char ch='A';
+  int size=n*2-1;
+  int start=0;
+  int end=size-1;
+  char a[][]=new char[size][size];
+  while(n!=0)
+  {
+   for(int i=start;i<=end;i++)
+   {
+    for(int j=start;j<=end;j++)
+    {
+     if(i==start||i==end||j==end||j==start)
+       a[i][j]=ch;
+    }
+   }
+   start++;
+   end--;
+   n--;
+   ch++;
+  }
+  for(int i=0;i<size;i++)
+  {
+   for(int j=0;j<size;j++)
+   {
+     System.out.print(a[i][j]+" ");
+   }
+   System.out.println("  ");
+  }
+ }
+}
+................................................
+OUTPUT :
+      enter n value:
+      4
+      A A A A A A A
+      A B B B B B A
+      A B C C C B A
+      A B C D C B A
+      A B C C C B A
+      A B B B B B A
+      A A A A A A A  
