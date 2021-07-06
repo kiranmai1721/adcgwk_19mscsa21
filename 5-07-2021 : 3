@@ -1,0 +1,68 @@
+import java.util.*;
+class program3
+{
+ public static void main(String args[])
+ {
+   Scanner scn=new Scanner(System.in);
+   System.out.println("Enter n value");
+   int n=scn.nextInt();
+   int a[]=new int[n];
+   int count=0;
+   int temp;
+   System.out.println("Enter the elements");
+   for(int i=0;i<n;i++)
+     a[i]=scn.nextInt();
+   System.out.println("Odd elements in array");
+   for(int i=0;i<n;i++)
+   {
+     if(a[i]%2!=0)
+     { 
+      System.out.println(a[i]);
+      count++;
+     }
+   }
+   int odd[]=new int[count];
+   int k=0;
+   for(int i=0;i<n;i++)
+   {
+     if(a[i]%2!=0)
+     {
+       odd[k]=a[i];
+       k++;
+      }
+   }
+   for(int i=0;i<count;i++)
+   {
+     for(int j=i+1;j<count;j++)
+      {
+        if(odd[i]>odd[j])
+         {
+            temp=odd[i];
+            odd[i]=odd[j];
+            odd[j]=temp;
+         }
+      }
+    }    
+    System.out.println("Elements in ascending order");
+    for(int i=0;i<count;i++)
+      System.out.println(odd[i]);
+  }
+}
+
+ ...........................................
+ OUTPUT :
+        Enter n value
+        4
+        Enter the elements
+        17
+        85
+        36
+        21
+        Odd elements in array
+        17
+        85
+        21
+        Elements in ascending order
+        17
+        21
+        85
