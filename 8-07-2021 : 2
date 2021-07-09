@@ -1,0 +1,41 @@
+import java.util.*;
+class program2
+{
+ public static void main(String args[])
+ {
+  Scanner scn=new Scanner(System.in);
+  System.out.println("enter row and coloumn");
+  int r=scn.nextInt();
+  int c=scn.nextInt();
+  int max;
+  int sum;
+  int a[][]=new int[r][c];
+  for(int i=0;i<r;i++)
+   for(int j=0;j<c;j++)
+     a[i][j]=scn.nextInt();
+  
+  for(int i=0;i<c;i++)
+  {
+   max=a[0][i];
+   for(int j=0;j<r;j++)
+   {
+    if(a[j][i]>max)
+    {
+     max=a[j][i];
+    }
+   }
+   System.out.println("biggest element in "+(i+1) +" coloumn"+max);
+  }
+ }
+}
+.................................
+OUTPUT:
+      enter row and coloumn
+      2
+      2
+      1
+      2
+      3
+      4
+      biggest element in 1 coloumn3
+      biggest element in 2 coloumn4
