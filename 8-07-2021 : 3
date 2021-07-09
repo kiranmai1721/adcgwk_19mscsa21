@@ -1,0 +1,43 @@
+import java.util.*;
+class program3
+{
+ public static void main(String args[])
+ {
+  Scanner scn=new Scanner(System.in);
+  System.out.println("enter row and coloumn");
+  int r=scn.nextInt();
+  int c=scn.nextInt();
+  int temp;
+  int a[][]=new int[r][c];
+  for(int i=0;i<r;i++)
+   for(int j=0;j<c;j++)
+     a[i][j]=scn.nextInt();
+  int transpose[][]=new int[r][c];
+  for(int i=0;i<r;i++)
+  {
+   for(int j=0;j<c;j++)
+   {
+    transpose[j][i]=a[i][j];
+   }
+  }
+  System.out.println("Transpose is");
+  for(int i=0;i<r;i++)
+   for(int j=0;j<c;j++)
+     System.out.println(transpose[i][j]);
+ }
+}
+..............................
+OUTPUT :
+      enter row and coloumn
+      2
+      2
+      1
+      2
+      3
+      4
+      Transpose is
+      1
+      3
+      2
+      4
+      
