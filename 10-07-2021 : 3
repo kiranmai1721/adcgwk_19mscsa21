@@ -1,0 +1,21 @@
+import java.util.*;
+class program3
+{
+ public static void main(String args[])
+ {
+  Scanner scn=new Scanner(System.in);
+  System.out.println("Enter a string");
+  String s=scn.nextLine();
+  String s1=s.toUpperCase();
+  System.out.println("Uppercase :" +s1);
+  String s2=s.toLowerCase();
+  System.out.println("Lowercase :" +s2);
+ }
+}
+......................
+OUTPUT:
+      Enter a string
+      java
+      Uppercase :JAVA
+      Lowercase :java
+      
