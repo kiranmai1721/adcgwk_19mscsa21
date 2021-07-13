@@ -1,0 +1,28 @@
+import java.util.*;
+class program2 //descending order
+{
+ public static void main(String args[])
+ {
+  Scanner scn=new Scanner(System.in);
+  System.out.println("enter a string");
+  String str=scn.next();
+  char ch[]=str.toCharArray();
+  int n=ch.length;
+  Arrays.sort(ch);
+  for(int i=0;i<n/2;i++)
+  {
+   char temp=ch[i];
+   ch[i]=ch[n-i-1];
+   ch[n-i-1]=temp;
+  }
+  for(int i=0;i<n;i++)
+  {
+   System.out.print(ch[i]);
+  }
+ }
+}
+................................
+OUTPUT:
+      enter a string
+      java
+      vjaa
