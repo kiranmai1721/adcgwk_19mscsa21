@@ -1,0 +1,33 @@
+import java.util.*;
+class program3
+{ 
+ public static void main(String args[])
+ {
+  Scanner scn=new Scanner(System.in);
+  System.out.println("Enter principle amount");
+  float p=scn.nextFloat();
+  System.out.println("Enter time period");
+  float t=scn.nextFloat();
+  System.out.println("Enter rate of intrest");
+  float r=scn.nextFloat();
+  SimpleIntrest s=new SimpleIntrest();
+  s.SI(p,t,r);
+ }
+}
+class SimpleIntrest
+{
+ public void SI(float p,float t,float r)
+ {
+  float i=(p*t*r)/100;
+  System.out.println(i);
+ }
+}
+.......................
+OUTPUT:
+       Enter principle amount
+       5000.00
+       Enter time period
+       2.00
+       Enter rate of intrest
+       3.00
+       300.0
