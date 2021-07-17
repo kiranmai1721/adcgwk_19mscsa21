@@ -1,0 +1,37 @@
+import java.util.*;
+class program2
+{
+ public static void main(String args[])
+ {
+  Scanner scn=new Scanner(System.in);
+  System.out.println("Enter size");
+  int n=scn.nextInt();
+  LinkedList<Integer> a=new LinkedList<Integer>();
+  System.out.println("Enter elements");
+  for(int i=0;i<n;i++)
+   a.add(scn.nextInt());
+  System.out.println("Enter element to delete");
+  int del=scn.nextInt();
+  int val=a.indexOf(del);
+  if(val==-1)
+   System.out.println("Element not found");
+  else
+  {
+    a.remove(val);
+    n--;
+    System.out.println("List after deletion: ");
+    for(int i=0;i<n;i++)
+      System.out.print(a.get(i)+" ");
+   }  
+ }
+}
+.......................
+OUTPUT:
+       Enter size
+       5
+       Enter elements
+       10 20 30 40 50
+       Enter element to delete
+       30                                  |   3
+       List after deletion: 10 20 40 50    |   Element not found
+       
