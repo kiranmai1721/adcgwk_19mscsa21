@@ -1,0 +1,35 @@
+import java.util.*;
+class program1
+{
+ public static void main(String args[])
+ {
+  Scanner scn=new Scanner(System.in);
+  System.out.println("Enter size");
+  int n=scn.nextInt();
+  LinkedList<Integer> a=new LinkedList<Integer>();
+  System.out.println("Enter elements");
+  for(int i=0;i<n;i++)
+   a.add(scn.nextInt());
+  System.out.println("Enter value and updated value");
+  int k=scn.nextInt();
+  int update=scn.nextInt();
+  int val=a.indexOf(k);
+  if(val==-1)
+   System.out.println("false");
+  else
+  {
+   a.set(val,update);
+   for(int i=0;i<n;i++)
+   System.out.print(a.get(i)+" ");
+   }
+ }
+}
+................................
+OUTPUT:
+       Enter size
+       5
+       Enter elements
+       10 20 30 40 50
+       Enter value and updated value
+       20  99               |  2 99
+       10 99 30 40 50       |  false
