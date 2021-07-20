@@ -1,0 +1,38 @@
+import java.util.*;
+class program3
+{ 
+ public static void count(int key[],int m)
+ {
+   Map<Integer,Integer> mp= new HashMap<Integer,Integer>();
+   for(int i=0;i<m;i++)
+   {  
+      if(mp.containsKey(key[i]))
+       {
+         mp.put(key[i],mp.get(key[i])+1);
+         m--;
+        } 
+      else
+         mp.put(key[i],1);
+   }
+   System.out.println("Below is the frequency of repeated elements");
+   System.out.println(mp);
+  }
+ public static void main(String args[])
+ {
+  Scanner scn=new Scanner(System.in);
+  System.out.println("enter size");
+  int m=scn.nextInt();
+  int key[]=new int[m];
+  for(int i=0;i<m;i++)
+    key[i]=scn.nextInt();
+  count(key,m);
+ }
+}
+........................
+OUTPUT:  
+      enter size
+      5
+      4 4 5 5 6
+      Below is the frequency of repeated elements 
+      {4=2, 5=2}
+  
