@@ -1,0 +1,41 @@
+import java.util.*;
+class program1
+{
+ public static void main(String args[])
+ {
+  Scanner scn=new Scanner(System.in);
+  System.out.print("enter n value");
+  int n=scn.nextInt();
+  Map<Integer,Integer> mp= new HashMap<Integer,Integer>();
+  while(n>0)
+  {
+    char ch=scn.next().charAt(0);
+    switch(ch)
+    {
+    case 'a':
+    int key =scn.nextInt();
+    int value = scn.nextInt();
+    mp.put(key,value);
+    break;
+    case 'b':
+    key =scn.nextInt();
+    System.out.print(mp.get(key)+" ");
+    break;
+    case 'c':
+    System.out.print(mp.size()+" ");
+    break;
+    case 'd':
+    key =scn.nextInt();
+    mp.remove(key);
+    break;
+   }
+   n--; 
+  }
+ }
+}
+.............................
+OUTPUT:
+      enter n value
+      5 
+      a 1 2 a 66 3 b 66 d 1 c 
+      3 1
