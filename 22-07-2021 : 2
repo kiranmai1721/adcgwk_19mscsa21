@@ -1,0 +1,26 @@
+class Solution {
+    public int firstUniqChar(String s)
+    {
+        char ch[] = new char[126];
+        int index=-1;
+        for(int i=0;i<s.length();i++)
+        {
+        ch[s.charAt(i)]++;
+        }
+        for(int i=0;i<s.length();i++)
+        {
+            if(ch[s.charAt(i)]==1)
+            {
+                 index=i;
+            break;
+            }
+        }
+        return index;
+    }
+}
+...........................
+OUTPUT:  
+      Accepted         Runtime: 0 ms
+      Your input       "leetcode"
+      Output            0
+      Expected          0
