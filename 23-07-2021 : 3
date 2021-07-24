@@ -1,0 +1,34 @@
+class program3
+{
+ public static void main(String args[])
+ {
+  Scanner scn=new Scanner(System.in);
+  System.out.println("Enter array size");
+  int n= scn.nextInt(); 
+  int arr[]=new int[n];
+  for(int i=0;i<n;i++)
+    arr[i]=scn.nextInt();
+  Map<Integer,Integer> mp=new HashMap<Integer,Integer>();
+  for(int i=0;i<n;i++)
+   {  
+      if(mp.containsKey(arr[i]))
+         mp.put(arr[i],mp.get(arr[i])+1);
+      else
+         mp.put(arr[i],1);
+   }
+  Iterator it= mp.keySet().iterator();
+  while(it.hasNext())
+  {
+  int key=(int)it.next();
+  System.out.println("key: "+key+"     value: "+mp.get(key)); 
+  }
+ } 
+}
+.................................
+OUTPUT:
+       Enter array size
+       5
+       1 2 3 1 2
+       key: 1     value: 2
+       key: 2     value: 2
+       key: 3     value: 1
