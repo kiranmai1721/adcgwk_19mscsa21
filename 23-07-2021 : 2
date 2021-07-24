@@ -1,0 +1,29 @@
+import java.util.*;
+class program2
+{
+ public static void main(String args[])
+ {
+  Scanner scn=new Scanner(System.in);
+   System.out.println("Enter array size");
+  int n= scn.nextInt(); 
+  int arr[]=new int[n];
+  for(int i=0;i<n;i++)
+    arr[i]=scn.nextInt();
+  Set<Integer> s=new HashSet();
+  for(int i=0;i<n;i++)
+    s.add(arr[i]);
+  Iterator it= s.iterator();
+  System.out.print("displaying using iterator :");
+  while(it.hasNext())
+    {
+      Integer i=(Integer)it.next();
+      System.out.print( i +" ");
+    }
+  }
+}
+...............................
+OUTPUT:
+      Enter array size
+      5
+      1 2 1 3 4
+      displaying using iterator :1 2 3 4
