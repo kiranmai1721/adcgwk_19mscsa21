@@ -1,0 +1,29 @@
+import java.util.*;
+class program1
+{
+ public static void main(String args[])
+ {
+  Scanner scn=new Scanner(System.in);
+  System.out.println("Enter array size");
+  int n= scn.nextInt(); 
+  int arr[]=new int[n];
+  for(int i=0;i<n;i++)
+    arr[i]=scn.nextInt();
+  ArrayList<Integer> a=new ArrayList<Integer>();
+  for(int i=0;i<n;i++)
+   a.add(arr[i]);
+  Iterator it= a.iterator();
+  System.out.print("displaying using iterator :");
+  while(it.hasNext())
+    {
+      Integer i=(Integer)it.next();
+      System.out.print( i +" ");
+    }
+  }
+}
+..............................
+OUTPUT:
+      Enter array size
+      4
+      17 21 09 23
+      displaying using iterator :17 21 09 23
