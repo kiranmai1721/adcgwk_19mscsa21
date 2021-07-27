@@ -1,0 +1,26 @@
+class Solution {
+    public int trailingZeroes(int n) {
+        int fact=1;
+        for(int i=1;i<=n;i++)
+        {
+            fact=fact*i;
+        }
+        int count=0;
+        int res,rem=0;
+        while(fact>0)
+        {
+        res=fact%10;
+        rem=(res*10)  + rem;
+        if(rem==0)
+            count++;
+        fact=fact/10;
+        }
+        return count;
+    }
+}
+.................................
+OUTPUT:
+      Accepted       Runtime: 0 ms
+      Your input     3
+      Output         0
+      Expected       0
