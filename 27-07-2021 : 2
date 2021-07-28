@@ -1,0 +1,62 @@
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+ class TestClass
+ {
+     static int n=5000000;
+         static boolean prime[]=new boolean[n+1];
+         static void sieve(int n)
+         {
+            for(int i=0;i<=n;i++)
+                prime[i]=true;
+                    prime[0]=false;
+                    prime[1]=false;
+                
+                for(int j=2;j*j<=n;j++)
+                {
+                    if(prime[j]=true)
+                    {
+                        for(int i=j*j;i<=n;i+=j)
+                            prime[i]=false;
+                    }
+                }
+         }
+    public static void main(String args[] ) throws Exception
+    {
+         BufferedReader b= new BufferedReader(new InputStreamReader(System.in));
+         int t=Integer.parseInt(b.readLine());
+         while(t>0)
+         {
+             int l,r;
+             String a[]=b.readLine().trim().split("\\s+");
+             l=Integer.parseInt(a[0]);
+             r=Integer.parseInt(a[1]);
+                int sum=0;
+                 sieve(r);
+                for(int i=l;i<=r;i++)
+                {
+                   
+                    if(prime[i]==true)
+                        sum+=i;
+                }
+               System.out.println(sum);
+               sum=0;
+               t--;
+         }
+    }
+}
+...............................
+OUTPUT:
+     RESULT: Sample Test Cases Passed Refer judge environment 
+     Time (sec)   0.074498       
+     Input  
+     2
+     1 6
+     4 13
+     
+     Output       Expected Correct Output
+     10           10
+     36           36
+     
+     
+    
