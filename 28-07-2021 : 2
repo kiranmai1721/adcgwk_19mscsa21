@@ -1,0 +1,51 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class program2
+{
+     static int n=20000005;
+     public static int prime[] = new int[n];
+     public static int arr[] = new int[n];
+     public static void sieve()
+   {
+     for(int i=0;i<n;i++)
+         prime[i]=1;
+     prime[0]=0;
+     prime[1]=0;
+     for(int i=2;i*i<n;i++)
+     {
+        if(prime[i]==1)
+        {
+            for(int j=i*i;j<n;j+=i)
+                 prime[j]=0;
+        }
+     }
+     int k=0;
+     for(int i=0;i<n;i++)
+    {
+       if(prime[i]==1)
+       {
+           arr[k]=i;
+           k++;
+        }
+     }
+    }
+    public static void main(String args[]) throws java.lang.Exception
+    {
+       Scanner scn=new Scanner(System.in);
+       int n=scn.nextInt();
+        sieve();
+        for(int i=n;i>=0;i--)
+        {
+           if(prime[i]==1)
+             System.out.println(i);
+        }
+    } 
+}
+..................................
+OUTPUT:
+       10
+       7 
+       5
+       3
+       2
