@@ -1,0 +1,48 @@
+import java.io.*;
+import java.util.*;
+import java.lang.*;
+class Solution
+{
+     static int n=20000000;
+      static int m=20000000;
+     public static int prime[] = new int[n];
+     public static int arr[] = new int[n];
+     public static void sieve(int m)
+   {
+     for(int i=0;i<=m;i++)
+         prime[i]=1;
+     prime[0]=0;
+     prime[1]=0;
+     for(int i=2;i*i<=m;i++)
+     {
+        if(prime[i]==1)
+        {
+            for(int j=i*i;j<=m;j+=i)
+                 prime[j]=0;
+        }
+     }
+    }
+    public static void main(String args[]) throws java.lang.Exception
+    {
+       BufferedReader b= new BufferedReader(new InputStreamReader(System.in));
+       String a[]=b.readLine().trim().split("\\s+");
+             n=Integer.parseInt(a[0]);
+             m=Integer.parseInt(a[1]);
+        sieve(m);
+        int count=0;
+        for(int i=n;i<=m;i++)
+        {
+           for(int j=i;j<=m;j++)
+          {
+             if((prime[i]==1) && (prime[j]==1) && ((i-j==2) || (i-j== -2 )))
+                   count+=1;
+             }    
+          }
+         System.out.println(count);
+      } 
+}
+..............................
+OUTPUT:
+         Input             3 13
+         Your Output        3
+         Expected Output    3
