@@ -1,0 +1,47 @@
+import java.io.*;
+import java.util.*;
+
+public class program2
+{
+    static int m=1000000;
+    public static int prime[]=new int[m];
+     public static void sieve()
+     {
+            for(int i=0;i<m;i++)
+                prime[i]=1;
+             prime[0]=0;
+             prime[1]=0;
+             for(int p=2;p*p<m;p++)
+             {
+                 if(prime[p]==1)
+                 {
+                     for(int j=p*p;j<m;j+=p)
+                     {
+                         prime[j]=0;
+                     }
+                 }
+             }
+     }
+    public static void main(String args[])
+    {
+        Scanner scn=new Scanner(System.in);
+                 int n=scn.nextInt();
+                  sieve();
+                   int count=0;
+               for(int i=2;i<n;i++)
+              {
+                while(n%i==0)
+             {
+                  System.out.print(i +" ");
+                  count++;
+                  n = n/i;
+             }
+       }
+         System.out.print("\nNo.of Prime Factors are :" + count);
+    }  
+  }
+...............................
+OUTPUT:
+         225
+         3 3 5 5
+         No.of prime factors are:4
