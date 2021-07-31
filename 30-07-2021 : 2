@@ -1,0 +1,25 @@
+class Solution {
+    public boolean isUgly(int n) {
+        if(n == 1)
+            return true;
+        if(n == 0)
+            return false;
+        int[] primes = new int[]{2,3,5};
+        int i = 0;
+        while(i < 3){
+            while(n % primes[i] == 0){
+                n /= primes[i];
+            }
+            i++;
+        }
+        if(n == 1)
+            return true;
+        return false;
+    }
+}
+...........................
+OUTPUT:
+          Accepted          Runtime: 0 ms
+          Your input        6
+          Output            true
+          Expected          true
