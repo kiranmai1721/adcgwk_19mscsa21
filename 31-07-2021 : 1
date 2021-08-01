@@ -1,0 +1,41 @@
+import java.util.*;
+class program1
+{
+ static int m=1000000;
+    public static int prime[]=new int[m];
+     public static void sieve()
+     {
+            for(int i=0;i<m;i++)
+                prime[i]=i;
+             prime[0]=0;
+             prime[1]=0;
+             for(int p=2;p*p<m;p++)
+             {
+                 if(prime[p]==p)
+                 {
+                     for(int j=p*p;j<m;j+=p)
+                     {
+                         prime[j]=p;
+                     }
+                 }
+             }
+     }
+ public static void main(String args[])
+ {
+   Scanner scn=new Scanner(System.in);
+   sieve();
+   int n=scn.nextInt();
+   for(int i=n;i>=2;i++)
+   {
+     if(prime[i]==i)
+      {
+         System.out.println(i);
+         break;
+       }
+   }
+ } 
+}
+...............................
+OUTPUT:
+         121   | 10
+         127   | 11
