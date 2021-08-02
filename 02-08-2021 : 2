@@ -1,0 +1,43 @@
+import java.util.*;
+class program2
+{
+ static int n=1000;
+ static int prefix[]=new int[n];
+ static int arr[]=new int[n];
+ static void prefix()
+ {
+   int k=0;
+    for(int i=0;i<n;i++)
+    {
+       if(i%2==0)
+        {
+         arr[k]=i;
+         k++;  
+        }
+     }
+     prefix[0]=arr[0];
+     for(int i=1;i<n;i++)
+         prefix[i]=arr[i]+prefix[i-1];
+   }
+  public static void main(String args[])
+  {
+   Scanner scn=new Scanner(System.in);
+   int t=scn.nextInt();
+   while(t>0)
+   {
+     int n=scn.nextInt();
+     prefix();
+     System.out.println(prefix[n]);
+     t--;
+    }  
+  }
+}
+...........................
+OUTPUT:
+        3
+        4
+        20
+        10
+        110
+        20
+        420
